@@ -1,0 +1,64 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+.App {
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  place-items: center;
+}
+.app_videos {
+  position: relative;
+  height: 90vh;
+  border-radius: 20px;
+  /* width: 80%; */
+  max-width: 500px;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+h1 {
+  color: white;
+}
+
+/* hide scrollbar chrome,safari,and opera */
+.app_videos::-webkit-scrollbar {
+  display: none;
+}
+/* hide scrollbar IE,edge */
+.app_videos {
+  -ms-overflow-style: none;
+}
+
+/* video component */
+
+.video {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  border-radius: 20px;
+}
+.video_player {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+/* Video Footer Component */
+.videoFooter {
+  position: relative;
+  color: white;
+  bottom: 150px;
+  margin-left: 40px;
+  display: flex;
+}
+.videoFooter_text {
+  flex: 1;
+}
+.videoFooter > p {
+  padding-bottom: 20px;
+}
+.videoFooter > h3 {
+  padding-bottom: 20px;
+}
