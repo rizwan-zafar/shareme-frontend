@@ -5,9 +5,15 @@ import Video from "./Components/Video"
     <div className="App">
       <h1>ShareMe</h1>
       <div className="app_videos">
-      <Video />
-      <Video />
-      <Video /> 
+      <Video url="video/cat.mp4"
+             channel="GoodLife"
+             description="Good life is great blessing"
+             title="this is the title"
+             likes={100}
+             messages={100}
+             shares={100}
+      />
+      
       </div>
   
     </div>

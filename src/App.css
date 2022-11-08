@@ -45,6 +45,19 @@ h1 {
   height: 100%;
 }
 
+/* Video SideBar Component */
+.videoSideBar{
+  position: absolute;
+  top:30vh;
+  right: 10px;
+  color: white;
+}
+.videoSidebar_button{
+  padding: 20px;
+  text-align: center;
+}
+
+
 /* Video Footer Component */
 .videoFooter {
   position: relative;
@@ -61,4 +74,34 @@ h1 {
 }
 .videoFooter > h3 {
   padding-bottom: 20px;
+}
+.videoFooter_icons{
+  position:absolute;
+}
+.videoFooter_ticker> .ticker{
+height: fit-content;
+margin-left: 30px;
+width: 60%;
+}
+ 
+
+.videoFooter_record{
+  animation: spinTheRecord infinite 3s linear;
+  height: 50px;
+  filter: invert(1);
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+.videoFooter_ticker h1{
+padding-top: 20px;
+}
+@keyframes spinTheRecord {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }

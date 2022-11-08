@@ -1,7 +1,9 @@
 import React from "react";
 import VideoFooter from "./VideoFooter";
+import VideoSideBar from "./VideoSidebar"
 
-export default function Video() {
+
+export default function Video({url,channel,description,title,likes,shares,messages}) {
   const videoRef = React.useRef(null);
   const [playing, setPlaying] = React.useState(false);
   const handleVideoPress = () => {
@@ -15,15 +17,19 @@ export default function Video() {
   };
   return (
     <div className="video">
+      
       <video
         onClick={handleVideoPress}
         autoPlay
         loop
+        title="YouTube video player"
         ref={videoRef}
         className="video_player"
-        src="video/cat.mp4"
+        src={url}
       />
-      <VideoFooter />
+       <VideoFooter channel={channel} description={description} title={title} />
+       <VideoSideBar likes={likes} shares={shares} messages={messages} />
+     
     </div>
   );
 }
