@@ -3,11 +3,15 @@ html {
 }
 .App {
   height: 100vh;
-  background-color: black;
+  /* background-color: black; */
+  background-image: url("https://wallpapercave.com/wp/wp2888031.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: grid;
   place-items: center;
 }
 .app_videos {
+  box-shadow: 5px 5px 20px #8f8c8c;
   position: relative;
   height: 90vh;
   border-radius: 20px;
