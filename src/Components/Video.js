@@ -3,9 +3,16 @@ import VideoFooter from "./VideoFooter";
 import VideoSideBar from "./VideoSidebar"
 
 
-export default function Video({url,channel,description,title,likes,shares,messages}) {
+export default function Video({ url, channel, description, title, likes, shares, messages }) {
+
   const videoRef = React.useRef(null);
   const [playing, setPlaying] = React.useState(false);
+
+
+
+/*
+ * handle play  & Pause 
+*/
   const handleVideoPress = () => {
     if (playing) {
       videoRef.current.pause();
@@ -15,9 +22,11 @@ export default function Video({url,channel,description,title,likes,shares,messag
       setPlaying(true);
     }
   };
+
+
+
   return (
     <div className="video">
-      
       <iframe
         onClick={handleVideoPress}
         autoPlay
@@ -27,9 +36,9 @@ export default function Video({url,channel,description,title,likes,shares,messag
         className="video_player"
         src={url}
       />
-       <VideoFooter channel={channel} description={description} title={title} />
-       <VideoSideBar likes={likes} shares={shares} messages={messages} />
-     
+      <VideoFooter channel={channel} description={description} title={title} />
+      <VideoSideBar likes={likes} shares={shares} messages={messages} />
+
     </div>
   );
 }
