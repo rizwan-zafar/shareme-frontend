@@ -3,7 +3,6 @@ html {
 }
 .App {
   height: 100vh;
-  /* background-color: black; */
   background-image: url("https://wallpapercave.com/wp/wp2888031.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,7 +14,7 @@ html {
   position: relative;
   height: 90vh;
   border-radius: 20px;
-  /* width: 80%; */
+  width: 50vh;
   max-width: 500px;
   overflow: scroll;
   scroll-snap-type: y mandatory;
@@ -37,16 +36,17 @@ h1 {
 
 .video {
   position: relative;
-  background-color: white;
+  background-color: black;
   width: 100%;
   height: 100%;
   scroll-snap-align: start;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 .video_player {
   object-fit: fill;
   width: 100%;
   height: 100%;
+  border:none;
 }
 
 /* Video SideBar Component */

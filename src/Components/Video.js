@@ -18,7 +18,7 @@ export default function Video({url,channel,description,title,likes,shares,messag
   return (
     <div className="video">
       
-      <video
+      <iframe
         onClick={handleVideoPress}
         autoPlay
         loop
